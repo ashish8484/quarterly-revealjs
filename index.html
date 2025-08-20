@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Quarterly Earnings Report — RevealJS</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Reveal core styles + theme -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/dist/reveal.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/dist/theme/white.css" id="theme">
+  <!-- Syntax highlighting theme -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/plugin/highlight/monokai.css">
+  <style>
+    /* Optional: slightly larger text for readability */
+    .reveal { font-size: 30px; }
+  </style>
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+      <!-- Slide with your email -->
+      <section>
+        <h2>Quarterly Earnings Report</h2>
+        <p>23f2003181@ds.study.iitm.ac.in</p>
+        <p>Press <kbd>S</kbd> for speaker notes.</p>
+        <aside class="notes">
+          Welcome stakeholders. Today we’ll review revenue, costs, and guidance.
+        </aside>
+      </section>
+
+      <!-- Markdown slide -->
+      <section data-markdown>
+        <textarea data-template>
+## Highlights (Markdown Slide)
+- Revenue ↑ 12% YoY
+- Opex ↓ 5%
+- Net Profit Margin improving
+- Guidance maintained for Q4
+        </textarea>
+      </section>
+
+      <!-- Fragments (animated reveals) -->
+      <section>
+        <h2>Strategy Priorities</h2>
+        <ul>
+          <li class="fragment">Expand APAC footprint</li>
+          <li class="fragment fade-up">Launch AI-assisted products</li>
+          <li class="fragment fade-in-then-out">Optimize cloud spending</li>
+        </ul>
+        <aside class="notes">
+          Speak to APAC pipeline, product roadmap, and cost optimization impact.
+        </aside>
+      </section>
+
+      <!-- Code sample with syntax highlighting -->
+      <section>
+        <h2>Earnings Quick Plot (Python)</h2>
+        <pre><code class="language-python" data-line-numbers="1-3|6-9">
+import pandas as pd
+import matplotlib.pyplot as plt
+
+df = pd.DataFrame({
+  "Quarter": ["Q1","Q2","Q3","Q4"],
+  "Revenue": [120, 128, 135, 142]
+})
+
+plt.plot(df["Quarter"], df["Revenue"], marker="o")
+plt.title("Revenue by Quarter")
+plt.xlabel("Quarter"); plt.ylabel("$M")
+plt.show()
+        </code></pre>
+        <aside class="notes">
+          This is illustrative; exact figures are in the appendix workbook.
+        </aside>
+      </section>
+
+      <!-- Math equation -->
+      <section>
+        <h2>Financial Formula</h2>
+        <p>\[
+          \text{ROI} = \frac{\text{Net Profit}}{\text{Investment}} \times 100
+        \]</p>
+        <aside class="notes">
+          Use ROI to benchmark investment efficiency across initiatives.
+        </aside>
+      </section>
+
+      <!-- Closing with notes -->
+      <section>
+        <h2>Conclusion</h2>
+        <p>On track for Q4. Monitoring costs and cash flow closely.</p>
+        <aside class="notes">
+          Invite questions; remind them the full deck and appendix are on GitHub Pages.
+        </aside>
+      </section>
+
+    </div>
+  </div>
+
+  <!-- Reveal core + plugins -->
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/dist/reveal.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/plugin/markdown/markdown.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/plugin/highlight/highlight.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/plugin/math/math.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/plugin/notes/notes.js"></script>
+
+  <script>
+    Reveal.initialize({
+      hash: true,                 // slide ID in URL
+      slideNumber: 'c/t',         // show slide numbers
+      plugins: [ RevealMarkdown, RevealHighlight, RevealMath, RevealNotes ],
+      // MathJax v3 is auto-loaded by the math plugin
+    });
+  </script>
+</body>
+</html>
